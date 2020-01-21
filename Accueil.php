@@ -18,7 +18,7 @@ require_once('AccueilController.php');
 
               <ul class="nav navbar-nav navbar-right">
                   <li><p class="navbar-text"> <span class="glyphicon glyphicon-user"> </span> <a href="signin.php"> S'inscrire </a> </p></li>
-                  <li><p class="navbar-text"> <span class="glyphicon glyphicon-log-in"> </span> <a href="login.php"> Se connecter </a> </p></li>
+                  <li><p class="navbar-text"> <span class="glyphicon glyphicon-log-in"> </span> <a href="Connexion.Controller.php"> Se connecter </a> </p></li>
                   <li><p class="navbar-text"> <span class="glyphicon glyphicon-shopping-cart"> </span> <a href="cart.php"> Panier </a></p></li> <!--Metttre le nombre d'article en badge pour le panier-->
               </ul>
           </div>
