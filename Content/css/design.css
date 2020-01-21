@@ -1,0 +1,35 @@
+.vertical-menu {
+    float: left;
+    width: 150px;
+    margin-top:50px;
+    margin-right: 10px;
+    text-align: center;
+    height: 0px;
+    background-color: #ccc;
+}
+
+.vertical-menu a {
+  background-color: #337ab7;
+    color: #424242;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.vertical-menu a:hover {
+    background-color: #23527c;
+    color: white
+  }
+
+.vertical-menu a.active {
+    background-color: #23527c;
+    color: #A4A4A4;
+ }
+
+.vertical-menu .accueil {
+    font-size: 18px;
+}
+
+.liens {
+    background-color: #ccc;

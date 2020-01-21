@@ -1,2 +1,5 @@
 <?php
-$cat=["Boissons","Biscuits"]
+$aa="aaaaaaaaaa";
+require_once('Accueil.php');
+$cat=array ('Boissons', 'Biscuits');
+?>
