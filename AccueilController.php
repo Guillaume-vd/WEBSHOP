@@ -1,0 +1,2 @@
+<?php
+$cat=["Boissons","Biscuits"]
