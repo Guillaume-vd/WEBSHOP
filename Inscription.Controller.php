@@ -12,7 +12,7 @@
 	$sql_logins = "INSERT INTO logins (id, customer_id, username, password)
 	VALUES ('NULL', 'NULL', '".$_POST['login']."', '".$_POST['mdp']."')";
 	//echo $sql_logins;
-	$result = mysqli_query($cnxDb, $sql_logins) or die("erreur logins");;
+	$result = mysqli_query($cnxDb, $sql_logins) or die("erreur logins");
 	
 	header('Location: accueil.php');
 ?>
