@@ -1,13 +1,11 @@
 <?php 
 	session_start();
-	require_once 'login.php';
-	
-	$cnxDb = mysqli_connect('localhost', 'root', '', 'isiweb4shop'); 
 	$erreur="";
+	
 	if (isset($_POST['login']) && isset($_POST['mdp'])){
 		$login=$_POST['login'];
-		$mdp=$_POST['mdp'];
-		$query = "SELECT customer_id,username,password FROM logins WHERE username = '".$login."' AND password= '".$mdp."'";
+		$mdp=sha1($_POST['mdp']);
+		$query = "SELECT customer_id,username,password FROM logins WHERE username = '".$login."' AND password= '".$mdp."';";
 		$result = mysqli_query($cnxDb, $query);
 		$id= mysqli_fetch_assoc($result);
 		//Sauvegarde du login, du mot de passe, du nom et du prénom de l'utilisateur si il appartient à la base de données
@@ -24,4 +22,6 @@
 			$erreur= "L'utilisateur n'est pas reconnu !";
 		}
 	}
+	require_once 'login.php';
+
 ?>
