@@ -18,6 +18,8 @@
 			session_id($id['customer_id']);
 			$erreur="";
 			header('Location: accueil.php');
+			session_start();
+			$_SESSION['$login'] = array();
 		}
 		else {
 			session_id();

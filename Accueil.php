@@ -1,5 +1,10 @@
 <?php
 require_once 'HomeController.php';
+
+if(!isset($_SESSION)){
+	session_start();
+	$_SESSION['invit'] = array();
+}
 ?>
 <html>
   <head>
@@ -27,7 +32,7 @@ require_once 'HomeController.php';
                   echo("<li><p class='navbar-text'> <span class='glyphicon glyphicon-log-in'> </span> <a href='login.php'> Se connecter </a> </p></li>");
                 }
                 ?>
-                  <li><p class="navbar-text"> <span class="glyphicon glyphicon-shopping-cart"> </span> <a href="cart.php"> Panier </a></p></li> <!--Metttre le nombre d'article en badge pour le panier-->
+                  <li><p class="navbar-text"> <span class="glyphicon glyphicon-shopping-cart"> </span> <a href="Panier.Controller.php"> Panier </a></p></li> <!--Metttre le nombre d'article en badge pour le panier-->
 
               </ul>
           </div>
