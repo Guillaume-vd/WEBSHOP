@@ -1,5 +1,6 @@
 <?php
 require_once 'HomeController.php';
+require_once 'ProductslistController.php';
 ?>
 <html>
   <head>
@@ -20,7 +21,7 @@ require_once 'HomeController.php';
                 <?php
                 if($connecte){
                   echo("<li><p class='navbar-text'> <span class='glyphicon glyphicon-user'></span> $nom </p></li>");
-                  echo("<li><p class='navbar-text'> <span class='glyphicon glyphicon-log-in'> </span> <a href='login.php'> Déconnexion </a> </p></li>");
+                  echo("<li><p class='navbar-text'> <span class='glyphicon glyphicon-log-in'> </span> <a href='login.php'>     Déconnexion </a> </p></li>");
                 }
                 else{
                   echo("<li><p class='navbar-text'> <span class='glyphicon glyphicon-user'> </span> <a href='signin.php'> S'inscrire </a> </p></li>");
@@ -34,21 +35,38 @@ require_once 'HomeController.php';
       </div>
       <div class="columnleft">
         <nav class="vertical-menu">
-            <a class="accueil active" href="accueil.php">Accueil</a></li>
+            <a class="accueil" href="accueil.php">Accueil</a>
               <?php
                   foreach ($cat as $value) {
-                    echo "<a href='productslist.php?category=$value'>Nos $value</a>";
+                    if($value==$category){
+                      echo "<a class='active' href='productslist.php?category=$value'>Nos $value</a>";
+                    }
+                    else{
+                      echo "<a href='productslist.php?category=$value'>Nos $value</a>";
+                    }
                 }
              ?>
+           </ul>
         </nav>
       </div>
       <div class="container body-content column-right">
-            <h1> Accueil </h1>
+            <?php
+              echo"<table><tr>";
+              foreach ($products as $value) {
+                $id=get_idprod($value);
+                echo"<tr>";
+                echo "<td class='tdprod'><a href='products.php?product=$value'>$value </td>";
+                echo "<td class='tdprod'><img src='Content/productimages/$img_name' alt='$img_name'></a></td>";
+                echo "<td class='tdprod'>Prix : $prix[$id] €</td>";
+                echo "<td class='tdprod'> Description :<br/>";
+                show_desc($value);
+                echo "</td></tr>";
+              }
+              echo("</table>")
+            ?>
             <hr />
             <footer>
-              <?php
-                echo("<p>".date("Y")." - ISIWEB4Shop</p>");
-              ?>
+
             </footer>
       </div>
   </body>

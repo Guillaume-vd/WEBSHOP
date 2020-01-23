@@ -4548,6 +4548,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-text {
   margin-top: 15px;
   margin-bottom: 15px;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 768px) {
   .navbar-text {

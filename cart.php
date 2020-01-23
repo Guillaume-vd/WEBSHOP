@@ -34,16 +34,16 @@ require_once 'HomeController.php';
       </div>
       <div class="columnleft">
         <nav class="vertical-menu">
-            <a class="accueil active" href="accueil.php">Accueil</a></li>
+            <a href="accueil.php">Accueil</a></li>
               <?php
                   foreach ($cat as $value) {
-                    echo "<a href='productslist.php?category=$value'>Nos $value</a>";
+                  echo "<a href='productslist.php?cat=$value'>Nos $value</a>";
                 }
              ?>
         </nav>
       </div>
       <div class="container body-content column-right">
-            <h1> Accueil </h1>
+            <h1>Panier</h1>
             <hr />
             <footer>
               <?php

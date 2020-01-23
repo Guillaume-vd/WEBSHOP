@@ -1,5 +1,6 @@
 <?php
 require_once 'HomeController.php';
+require_once 'ProductslistController.php'
 ?>
 <html>
   <head>
@@ -7,6 +8,8 @@ require_once 'HomeController.php';
     <link href="Content\css\bootstrap.css" rel="stylesheet" />
     <link href="Content\css\design.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="product.js">
+    </script>
     <title>ISIWEB4SHOP</title>
   </head>
   <body>
@@ -34,16 +37,29 @@ require_once 'HomeController.php';
       </div>
       <div class="columnleft">
         <nav class="vertical-menu">
-            <a class="accueil active" href="accueil.php">Accueil</a></li>
+            <a class="accueil" href="accueil.php">Accueil</a></li>
               <?php
                   foreach ($cat as $value) {
-                    echo "<a href='productslist.php?category=$value'>Nos $value</a>";
+                  echo "<a href='productslist.php?category=$value'>Nos $value</a>";
+
                 }
              ?>
         </nav>
       </div>
       <div class="container body-content column-right">
-            <h1> Accueil </h1>
+            <?php
+              echo "<h1> $product_name </h1>";
+              echo "<p><img class='imgprod' src='Content/productimages/$img_name' alt='$img_name'</p><hr/>";
+              show_desc($product_name);
+            ?>
+              <hr />
+              <input type="button" value="-" onclick="clic_moins()"/>
+              <input type="text" name="nbprod" id="nbprod" value="0" onselect="bloque_champ(this);" onFocus="bloque_champ(this);"/>
+              <input type="button" value="+" onclick="clic_plus()"/>
+            <hr />
+              <?php
+                getPrixNb();
+               ?>
             <hr />
             <footer>
               <?php
