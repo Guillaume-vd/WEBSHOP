@@ -1,7 +1,4 @@
 <?php 
-	require_once(PATH_CONTROLLERS.'panier.php');
-	require_once(PATH_VIEWS.'cart.php');
-	
 	$cnxDb = mysqli_connect('localhost', 'root', '', 'isiweb4shop');
 	mysqli_select_db($cnxDb,'isiweb4shop');
 	
@@ -14,5 +11,8 @@
 		$result = mysqli_fetch_assoc($res);
 		
 	}
-	//echo $result;
+	require_once(PATH_VIEWS.'bar.php');
+	require_once(PATH_VIEWS.'Categorie.php');
+	require_once(PATH_VIEWS.'cart.php');
+
 ?>

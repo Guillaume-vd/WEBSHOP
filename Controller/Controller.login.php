@@ -1,7 +1,5 @@
 <?php 	
 
-
-	
 	$cnxDb = mysqli_connect('localhost', 'root', '', 'isiweb4shop'); 
 	$erreur="";
 	if (isset($_POST['login']) && isset($_POST['mdp'])){
