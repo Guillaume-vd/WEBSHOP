@@ -18,7 +18,7 @@
 		//echo $sql_logins;
 		$result = mysqli_query($cnxDb, $sql_logins) or die("erreur logins");;
 	
-		require_once(PATH_CONTROLLERS."Home.php");
+		header('Location:index.php?page=Home');
 	}
 	
 ?>

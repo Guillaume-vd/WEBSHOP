@@ -18,7 +18,7 @@
 			session_id($id['customer_id']);
 			$erreur="";
 			$_SESSION['role'] = $login;
-			require_once(PATH_CONTROLLERS."Home.php");
+			header('Location:index.php?page=Home');
 		}
 		else {
 			session_id();
