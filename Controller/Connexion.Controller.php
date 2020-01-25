@@ -19,7 +19,7 @@
 		}
 		else {
 			session_id();
-			$erreur= "L'utilisateur n'est pas reconnu !";
+			$erreur= "Mauvais identifiant ou mot de passe saisie !";
 		}
 	}
 	require_once 'login.php';

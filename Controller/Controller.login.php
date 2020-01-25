@@ -9,7 +9,8 @@
 		$result = mysqli_query($cnxDb, $query);
 		$id= mysqli_fetch_assoc($result);
 		//Sauvegarde du login, du mot de passe, du nom et du prénom de l'utilisateur si il appartient à la base de données
-		if(mysqli_num_rows($result)!=0){ 
+		if(mysqli_num_rows($result)!=0){
+			$_SESSION['role'] = $login;	
 			$_SESSION['login'] = $login; 
 			$_SESSION['mdp'] = $mdp;
 			$_SESSION['customer_id']=$id['customer_id'];
