@@ -12,6 +12,6 @@
   if(isset($_GET['page']))
     require_once(PATH_CONTROLLERS.$_GET['page'].".php");
   else
-    require_once(PATH_VIEWS."Home.php");
+    require_once(PATH_CONTROLLERS."Home.php");
 
 ?>
