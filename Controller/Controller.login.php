@@ -20,8 +20,23 @@
 			header('Location:index.php?page=Home');
 		}
 		else {
-			session_id();
-			$erreur= "L'utilisateur n'est pas reconnu !";
+			$query = "SELECT username,password FROM admin WHERE username = '".$login."' AND password= '".$mdp."';";
+			$result = mysqli_query($cnxDb, $query);
+			$id= mysqli_fetch_assoc($result);
+			echo $query;
+			if(mysqli_num_rows($result)!=0){ 
+				$_SESSION['login'] = $login; 
+				$_SESSION['mdp'] = $mdp;
+				$_SESSION['customer_id']=$id['customer_id'];
+				$_SESSION['role'] = 'admin';
+				session_id($id['customer_id']);
+				$erreur="";
+				header('Location:index.php?page=Home');
+			}
+			else{
+				session_id();
+				$erreur= "Mauvais identifiant ou mot de passe saisie !";
+			}	
 		}
 	}
 	

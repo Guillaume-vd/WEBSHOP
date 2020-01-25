@@ -19,6 +19,11 @@
 					<h1> <?= $erreur ?></h1>
 				</p>
 
+            <footer>
+              <?php
+                echo("<p>".date("Y")." - ISIWEB4Shop</p>");
+              ?>
+            </footer>
 		</div>
 		</center>
 	</body>
