@@ -15,6 +15,9 @@
 				</p>
 				<input type="submit" name="connection" value ="Se connecter"></a>
 			</form>
+				<p>
+					<h1> <?= $erreur ?></h1>
+				</p>
 
 		</div>
 		</center>
