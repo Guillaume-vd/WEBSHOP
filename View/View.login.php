@@ -15,6 +15,9 @@
 				</p>
 				<input type="submit" name="connection" value ="Se connecter"></a>
 			</form>
+			<p>
+				<h1> Mauvais identifiant ou mot de passe! </h1>
+			</p>
 
 		</div>
 		</center>
