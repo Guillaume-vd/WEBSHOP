@@ -5,7 +5,7 @@
 	$res = mysqli_fetch_assoc($result);
 	//var_dump($res);
 	
-	$un = 1;
+	$id_commnde = $res['customer_id'];
 	
 	require_once(PATH_VIEWS."bar.php");
 	require_once(PATH_VIEWS."Categorie.php");
